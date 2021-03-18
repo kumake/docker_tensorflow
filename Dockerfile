@@ -14,8 +14,6 @@ WORKDIR /root
 RUN apt-get update \
         && apt-get install -y  vim lrzsz curl net-tools inetutils-ping zip \
         # jupyter支持python3
-        && python2 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ipykernel \
-        && python2 -m ipykernel install --user \
         && python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ipykernel \
         && python3 -m ipykernel install --user \
         #安装jupyterlab
