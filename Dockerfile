@@ -14,14 +14,14 @@ WORKDIR /root
 RUN apt-get update \
         && apt-get install -y  vim lrzsz curl net-tools inetutils-ping zip \
         # jupyter支持python3
-        && python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ipykernel \
+        && python3 -m pip install  ipykernel \
         && python3 -m ipykernel install --user \
         #安装jupyterlab
-        && pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple jupyterlab \
+        && pip3 install  jupyterlab \
         #安装pyecharts v1.0版本仅支持python3.6以上
-        && pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple pyecharts \
+        && pip3 install  pyecharts \
         #图像增广库
-        && pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple imgaug \
+        && pip3 install  imgaug \
                 # 用完包管理器后安排打扫卫生可以显著的减少镜像大小
                 && apt-get clean \
                 && apt-get autoclean \
