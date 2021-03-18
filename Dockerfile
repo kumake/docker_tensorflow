@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:latest:2.4.1
+FROM tensorflow/tensorflow:2.4.1
 
 #MAINTAINER NGINX Docker Maintainers "docker-maint@nginx.com"
 
